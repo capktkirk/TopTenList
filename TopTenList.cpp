@@ -23,15 +23,17 @@ Hyperlink TopTenList::get(int index)
 }
 
 void TopTenList::display_forward(){
-    std::cout << "Programming Languages Top Ten List\n";
+    std::cout << "-----------------------------------------\nTop Ten Programming Languages!!!\n";
     fou(i,_list.size()){
-        std::cout << i << ". " << get(i).text << " (" << get(i).url << ")\n";
+        if(i < 10) std::cout << i << ".  " << get(i).text << " <a href=\"" << get(i).url << "\">\n";
+        else       std::cout << i << ". " << get(i).text << " <a href=\"" << get(i).url << "\">\n";
     }
 }
 
 void TopTenList::display_backward(){
-    std::cout << "Programming Languages Top Ten List\n";
+    std::cout << "From TEN to ONE! The Top programming LISTS!\n";
     fod(i,_list.size()){
-        std::cout << i << ". " << get(i).text << " (" << get(i).url << ")\n";
+        if(i < 10) std::cout << i << ".  " << get(i).text << " <a href=\"" << get(i).url << "\">\n";
+        else       std::cout << i << ". " << get(i).text << " <a href=\"" << get(i).url << "\">\n";
     }
 }
